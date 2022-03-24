@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "dev": "tsx --watch",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|tsx|json)\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\""
   },
   "browserslist": {
     "production": [

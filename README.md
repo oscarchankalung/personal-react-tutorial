@@ -1,4 +1,4 @@
-# React Note
+# React Documentation
 
 A personal documentation to react
 

@@ -1,0 +1,56 @@
+// Game
+
+.game {
+  display: flex;
+  flex-direction: row;
+  .game-info {
+    margin-left: 20px;
+  }
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.order-toggle {
+  margin-left: 5px;
+}
+.bold {
+  font-weight: bold;
+}
+.reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+// Board
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+// Square
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  &.square-winning {
+    background: orange;
+  }
+}

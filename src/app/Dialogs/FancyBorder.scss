@@ -1,0 +1,14 @@
+.FancyBorder {
+  border-style: solid;
+  padding: 0.75em;
+}
+
+$colors: (
+  blue: rgb(0, 0, 255),
+);
+
+@each $color, $value in $colors {
+  .FancyBorder-#{$color} {
+    border-color: $value;
+  }
+}

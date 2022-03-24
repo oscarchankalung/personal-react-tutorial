@@ -1,4 +1,4 @@
-# 00 Index
+# Index
 
 - 01 Installation
   - 01 Getting Started

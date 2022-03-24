@@ -14,7 +14,7 @@ interface State {
 }
 
 class FilterableProductTable extends React.Component<Props, State> {
-  constructor(props: any) {
+  constructor(props: Props) {
     super(props)
     this.state = {
       filterText: '',

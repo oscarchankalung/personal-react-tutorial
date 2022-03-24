@@ -21,7 +21,7 @@ interface State {
 }
 
 class Game extends React.Component<unknown, State> {
-  constructor(props: any) {
+  constructor(props: unknown) {
     super(props)
     this.state = {
       history: [

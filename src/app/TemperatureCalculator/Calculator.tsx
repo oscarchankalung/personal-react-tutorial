@@ -12,7 +12,7 @@ interface State {
 }
 
 class Calculator extends React.Component<unknown, State> {
-  constructor(props: any) {
+  constructor(props: unknown) {
     super(props)
     this.state = { temperature: '', scale: 'c' }
     this.handleTemperatureChange = this.handleTemperatureChange.bind(this)

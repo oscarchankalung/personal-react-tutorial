@@ -1,12 +1,6 @@
 import React, { ChangeEvent } from 'react'
 import Dialog from './Dialog'
 
-function WelcomeDialog() {
-  return (
-    <Dialog title="Welcome" message="Thank you for visiting our spacecraft!" />
-  )
-}
-
 interface State {
   login: string
 }
@@ -42,14 +36,4 @@ class SignUpDialogs extends React.Component<Props, State> {
   }
 }
 
-function Dialogs() {
-  return (
-    <div>
-      <WelcomeDialog />
-      <br />
-      <SignUpDialogs />
-    </div>
-  )
-}
-
-export default Dialogs
+export default SignUpDialogs

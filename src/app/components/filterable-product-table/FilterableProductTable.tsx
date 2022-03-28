@@ -2,19 +2,54 @@ import React from 'react'
 import ProductTable from './ProductTable'
 import SearchBar from './SearchBar'
 
-import { Product } from './Constant'
-
-interface Props {
-  products: Product[]
+export interface Product {
+  category: string
+  price: string
+  stocked: boolean
+  name: string
 }
+
+export const PRODUCTS: Product[] = [
+  {
+    category: 'Sporting Goods',
+    price: '$49.99',
+    stocked: true,
+    name: 'Football',
+  },
+  {
+    category: 'Sporting Goods',
+    price: '$9.99',
+    stocked: true,
+    name: 'Baseball',
+  },
+  {
+    category: 'Sporting Goods',
+    price: '$29.99',
+    stocked: false,
+    name: 'Basketball',
+  },
+  {
+    category: 'Electronics',
+    price: '$99.99',
+    stocked: true,
+    name: 'iPod Touch',
+  },
+  {
+    category: 'Electronics',
+    price: '$399.99',
+    stocked: false,
+    name: 'iPhone 5',
+  },
+  { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' },
+]
 
 interface State {
   filterText: string
   inStockOnly: boolean
 }
 
-class FilterableProductTable extends React.Component<Props, State> {
-  constructor(props: Props) {
+class FilterableProductTable extends React.Component<unknown, State> {
+  constructor(props: unknown) {
     super(props)
     this.state = {
       filterText: '',
@@ -43,7 +78,7 @@ class FilterableProductTable extends React.Component<Props, State> {
           onInStockChange={this.handleStockOnlyChange}
         />
         <ProductTable
-          products={this.props.products}
+          products={PRODUCTS}
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
         />

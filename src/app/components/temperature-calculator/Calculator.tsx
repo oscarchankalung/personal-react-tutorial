@@ -1,8 +1,7 @@
 import React from 'react'
-import TemperatureInput from './TemperatureInput'
 import BoilingVerdict from './BoilingVerdict'
-
-import { toCelsius, toFahrenheit, tryConvert } from './Helpers'
+import TemperatureInput from './TemperatureInput'
+import { tryConvert, toCelsius, toFahrenheit } from './Helpers'
 
 export type Scale = 'c' | 'f'
 

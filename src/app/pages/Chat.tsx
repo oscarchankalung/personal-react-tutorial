@@ -1,6 +1,7 @@
 import React from 'react'
-import FriendList from './FriendList'
-import ChatRecipientPicker from './ChatRecipientPicker'
+
+import FriendList from '../components/chat/FriendList'
+import ChatRecipientPicker from '../components/chat/ChatRecipientPicker'
 
 export type Friend = {
   id: string
@@ -13,10 +14,10 @@ export const friendList: Friend[] = [
   { id: '3', name: 'Ross' },
 ]
 
-const Hooks: React.FC = () => {
+const Chat: React.FC = () => {
   return (
     <div>
-      <h1>Hooks</h1>
+      <h1>Using Hooks: Chat</h1>
       <ul>
         <li>Using State Hook</li>
         <li>Using Effect Hook Without Cleanup</li>
@@ -32,4 +33,4 @@ const Hooks: React.FC = () => {
   )
 }
 
-export default Hooks
+export default Chat

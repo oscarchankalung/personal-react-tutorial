@@ -14,11 +14,11 @@ A personal documentation to react
   - 04 Hooks
   - 05 Best Practices
 - [App](./src/App.tsx)
-  - 01 Tic-Tac-Toe: Tutorial
-  - 02 Temperature Calculator: Lifing State Up
-  - 03 Dialogs: Composition vs Inheritance
-  - 04 Filterable Product Table: Thinking in React
-  - 05 Hooks: Hooks
+  - 01 React Tutorial: Tic-Tac-Toe
+  - 02 Lifting State Up: Temperature Calculator
+  - 03 Composition vs Inheritance: Dialogs
+  - 04 Thinking in React: Filterable Product Table
+  - 05 Using Hooks: Chat
 
 ## Reference
 

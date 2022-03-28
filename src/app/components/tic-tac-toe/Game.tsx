@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Board from './Board'
 import { SquareValue } from './Square'
@@ -86,12 +86,12 @@ class Game extends React.Component<unknown, State> {
     }
 
     const order = (
-      <>
+      <Fragment>
         Order: {this.state.orderIsAscending ? 'Aescending' : 'Descending'}
         <button className="order-toggle" onClick={() => this.toggleOrder()}>
           Toogle
         </button>
-      </>
+      </Fragment>
     )
 
     const movesClassName = this.state.orderIsAscending ? '' : 'reverse'

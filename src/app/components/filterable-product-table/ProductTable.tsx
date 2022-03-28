@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Product } from './Constant'
+import { Product } from './FilterableProductTable'
 
 import './ProductTable.scss'
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import useFriendStatus from './useFriendStatus'
 import { getStatus } from './Helpers'
-import { Friend } from './Hooks'
+import { Friend } from '../../pages/Chat'
 
 export type Status = boolean | null
 

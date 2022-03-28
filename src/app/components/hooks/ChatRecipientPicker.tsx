@@ -1,8 +1,8 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 
-import useFriendStatus from './useFriendStatus'
-import { getStatus } from './Helpers'
-import { Friend } from './Hooks'
+import { Friend } from '../../pages/Chat'
+import { getStatus } from '../chat/Helpers'
+import useFriendStatus from '../chat/useFriendStatus'
 
 interface Props {
   friendList: Friend[]

@@ -7,6 +7,7 @@
     - Clearning up an effect
     - Timing of effect
     - Conditionally firing an effect
+    - Running only once with empty array's dependency
   - useContext
 - Additional Hooks
   - useReducer

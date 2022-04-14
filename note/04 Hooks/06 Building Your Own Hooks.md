@@ -6,7 +6,7 @@ Building your own Hooks lets you extract component logic into reusable functions
 - **Using a Custom Hook**
 - **Using a Reducer Hook**
 
-Reference: https://reactjs.org/docs/hooks-custom.html
+**Reference**: https://reactjs.org/docs/hooks-custom.html
 App: Hooks
 
 ## Extracting a Custom Hook

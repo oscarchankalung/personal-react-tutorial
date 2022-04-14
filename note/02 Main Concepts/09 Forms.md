@@ -24,7 +24,7 @@ This form has the default HTML form behavior of browsing to a new page when the 
 - **Alernatives to Controlled Components**
 - **Fully-Fledged Solutions**
 
-Reference: https://reactjs.org/docs/forms.html
+**Reference**: https://reactjs.org/docs/forms.html
 
 ## Controlled Components
 
@@ -37,20 +37,20 @@ We can combine the two by making the React state by the "single source of truth"
 ```jsx
 class NameForm extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { value: '' };
+    super(props)
+    this.state = { value: '' }
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSybmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSybmit = this.handleSubmit.bind(this)
   }
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    this.setState({ value: event.target.value })
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
+    alert('A name was submitted: ' + this.state.value)
+    event.preventDefault()
   }
 
   render() {
@@ -58,11 +58,15 @@ class NameForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
         </label>
         <input type="submit" value="Submit" />
       </form>
-    );
+    )
   }
 }
 ```
@@ -72,9 +76,7 @@ class NameForm extends React.Component {
 In HTML, a `<textarea>` element defines its text by its children.
 
 ```jsx
-<textarea>
-  Hello there, this is some text in a text area
-</textarea>
+<textarea>Hello there, this is some text in a text area</textarea>
 ```
 
 In React, a `<textarea>` uses a `value` attributes instead.
@@ -83,7 +85,11 @@ In React, a `<textarea>` uses a `value` attributes instead.
 <form onSubmit={this.handleSubmit}>
   <label>
     Name:
-    <textarea type="text" value={this.state.value} onChange={this.handleChange} />
+    <textarea
+      type="text"
+      value={this.state.value}
+      onChange={this.handleChange}
+    />
   </label>
   <input type="submit" value="Submit" />
 </form>
@@ -97,7 +103,9 @@ In HTML, `<select>` creates a drop-down list. Note that the Coconut option is in
 <select>
   <option value="grapefruit">Grapefruit</option>
   <option value="lime">Lime</option>
-  <option value="cocount" selected>Coconut</option>
+  <option value="cocount" selected>
+    Coconut
+  </option>
   <option value="mango">Mango</option>
 </select>
 ```
@@ -136,23 +144,23 @@ When you need to handle multiple controlled `input` elements, you can add a `nam
 ```jsx
 class Reservation extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       isGoing: true,
-      numberOfGuests: 2
-    };
+      numberOfGuests: 2,
+    }
 
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
 
   handleInputChange(event) {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
+    const target = event.target
+    const value = target.type === 'checkbox' ? target.checked : target.value
+    const name = target.name
 
     this.setState({
-      [name]: value
-    });
+      [name]: value,
+    })
   }
 
   render() {
@@ -164,7 +172,8 @@ class Reservation extends React.Component {
             name="isGoing"
             type="checkbox"
             checked={this.state.isGoing}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
         <br />
         <label>
@@ -173,7 +182,8 @@ class Reservation extends React.Component {
             name="numberOfGuests"
             type="number"
             value={this.state.numberOfGuests}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
       </form>
     )
@@ -188,11 +198,11 @@ Specifying the `value` prop on a controlled component prevents the user from cha
 The following code demonstrates this. (The input is locked at first but becomes editable after a short delay.)
 
 ```jsx
-ReactDOM.render(<input value="hi" />, mountNode);
+ReactDOM.render(<input value="hi" />, mountNode)
 
-setTimeout(function() {
-  React.DOM.render(<input value={null} />, mountNode);
-}, 1000);
+setTimeout(function () {
+  React.DOM.render(<input value={null} />, mountNode)
+}, 1000)
 ```
 
 ## Alernatives to Controlled Components

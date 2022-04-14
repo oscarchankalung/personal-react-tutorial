@@ -7,7 +7,7 @@ Conditional rendering in React wroks the same way conditions work in JavaScript.
 - **Inline If-Else with Conditional Operator**
 - **Preventing Component from Rendering**
 
-Reference: https://reactjs.org/docs/conditional-rendering.html
+**Reference**: https://reactjs.org/docs/conditional-rendering.html
 
 ## Element Variables
 
@@ -15,60 +15,45 @@ You can use variables to store elements. This can help you conditionally render 
 
 ```jsx
 function LoginButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Login
-    </button>
-  );
+  return <button onClick={props.onClick}>Login</button>
 }
 
 function LogoutButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Logout
-    </button>
-  );
+  return <button onClick={props.onClick}>Logout</button>
 }
 ```
 
 ```jsx
 class LoginControl extends React.Component {
   constructor(props) {
-    super(props);
-    this.handleLoginClick = this.handleLoginClick.bind(this);
-    this.handleLogoutClick = this.handleLogoutClick.bind(this);
-    this.state = { isLoggedIn: fasle };
+    super(props)
+    this.handleLoginClick = this.handleLoginClick.bind(this)
+    this.handleLogoutClick = this.handleLogoutClick.bind(this)
+    this.state = { isLoggedIn: fasle }
   }
 
   handleLoginClick() {
-    this.setState({ isLoggedIn: true });
+    this.setState({ isLoggedIn: true })
   }
 
   handleLogoutClick() {
-    this.setState({ isLoggedIn: false });
+    this.setState({ isLoggedIn: false })
   }
 
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
-    let button;
+    const isLoggedIn = this.state.isLoggedIn
+    let button
     if (isLoggedIn) {
-      button = <LogoutButton onClick={this.handleLogoutClick}/>;
+      button = <LogoutButton onClick={this.handleLogoutClick} />
     } else {
-      button = <LoginButton onClick={this.handleLoginClick}/>;
+      button = <LoginButton onClick={this.handleLoginClick} />
     }
 
-    return (
-      <div>
-        {button}
-      </div>
-    )
+    return <div>{button}</div>
   }
 }
 
-ReactDOM.render(
-  <LoginControl />,
-  document.getElementById('root')
-)
+ReactDOM.render(<LoginControl />, document.getElementById('root'))
 ```
 
 ## Inline If with Logical && Operator
@@ -77,20 +62,18 @@ You may embed expressions in JSX by wrapping them in curly braces. This includes
 
 ```jsx
 function Mailbox(props) {
-  const unreadMessages = props.unreadMessages;
+  const unreadMessages = props.unreadMessages
   return (
     <div>
       <h1>Hello!</h1>
-      {unreadMessages.length > 0 &&
-        <h2>
-          You have {unreadMessages.length} unread messages.
-        </h2>
-      }
+      {unreadMessages.length > 0 && (
+        <h2>You have {unreadMessages.length} unread messages.</h2>
+      )}
     </div>
   )
 }
 
-const messages = ['React', 'Re: React', 'Re:Re: React'];
+const messages = ['React', 'Re: React', 'Re:Re: React']
 ReactDOM.render(
   <Mailbox unreadMessages={messages} />,
   document.getElementById('root')

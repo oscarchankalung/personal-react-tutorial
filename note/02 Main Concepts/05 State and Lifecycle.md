@@ -25,7 +25,7 @@ setInterval(tick, 1000)
 - **Using State Correctly**
 - **The Data Flows Down**
 
-Reference: https://reactjs.org/docs/state-and-lifecycle.html
+**Reference**: https://reactjs.org/docs/state-and-lifecycle.html
 
 ## Converting a Function to a Class
 

@@ -7,17 +7,17 @@ Hooks are a new addition in React 16.8. They let you use state and other React f
 - **Rules of Hooks**
 - **Building Your Own Hooks**
 
-Reference: https://reactjs.org/docs/hooks-overview.html
+**Reference**: https://reactjs.org/docs/hooks-overview.html
 
 ## State Hook
 
 The State hook is called inside a function component to add some local state it. React will preserve the state between re-renders. `useState` returns a pair: the current state value and a function that lets you to update it.
 
 ```jsx
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <div>
@@ -26,7 +26,7 @@ function Counter() {
         Click Me
       </button>
     </div>
-  );
+  )
 }
 ```
 
@@ -43,14 +43,14 @@ You’ve likely performed data fetching, subscriptions, or manually changing the
 The Effect Hook adds the ability to perform side effects from a function component. It serves the same purpose as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` in React classes, but unified into a single API.
 
 ```jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
-    document.title = `You clicked ${count} times`;
-  });
+    document.title = `You clicked ${count} times`
+  })
 
   return (
     <div>
@@ -59,7 +59,7 @@ function Counter() {
         Click Me
       </button>
     </div>
-  );
+  )
 }
 ```
 
@@ -68,26 +68,26 @@ When you call `useEffect`, you’re telling React to run your “effect” funct
 Effects may also optionally specify how to “clean up” after them by returning a function. By returning a function, Rect would call the function when the component unmounts, as well as before re-running the effect due to a subsequent render. If you want, there's a way to tell React to skip re-running the effect.
 
 ```jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 function FriendStatus(props) {
-  const [isOnline, setIsOnline] = useState(null);
+  const [isOnline, setIsOnline] = useState(null)
 
   function handleStatusChange(status) {
-    setIsOnline(status.isOnline);
+    setIsOnline(status.isOnline)
   }
 
   useEffect(() => {
-    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange)
     return () => {
-      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
-    };
-  });
+      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange)
+    }
+  })
 
   if (isOnline === null) {
-    return 'Loading...';
+    return 'Loading...'
   }
-  return isOnline ? 'Online' : 'Offline';
+  return isOnline ? 'Online' : 'Offline'
 }
 ```
 
@@ -109,46 +109,44 @@ We provide a linter plugin to enforce these rules automatically.
 Sometimes, we want to reuse some stateful logic between components. Traditionally, there were two popular solutions to this problem: higher-order components and render props. Custom Hooks let you do this, but without adding more components to your tree.
 
 ```jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 function useFriendStatus(friendID) {
-  const [isOnline, setIsOnline] = useState(null);
+  const [isOnline, setIsOnline] = useState(null)
 
   function handleStatusChange(status) {
-    setIsOnline(status.isOnline);
+    setIsOnline(status.isOnline)
   }
 
   useEffect(() => {
-    ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
+    ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange)
     return () => {
-      ChatAPI.unsubscribeFromFriendStatus(friendID, handleStatusChange);
-    };
-  });
+      ChatAPI.unsubscribeFromFriendStatus(friendID, handleStatusChange)
+    }
+  })
 
-  return isOnline;
+  return isOnline
 }
 ```
 
 ```jsx
 function FriendStatus(props) {
-  const isOnline = useFriendStatus(props.friend.id);
+  const isOnline = useFriendStatus(props.friend.id)
 
   if (isOnline === null) {
-    return 'Loading...';
+    return 'Loading...'
   }
-  return isOnline ? 'Online' : 'Offline';
+  return isOnline ? 'Online' : 'Offline'
 }
 ```
 
 ```jsx
 function FriendListItem(props) {
-  const isOnline = useFriendStatus(props.friend.id);
+  const isOnline = useFriendStatus(props.friend.id)
 
   return (
-    <li style={{ color: isOnline ? 'green' : 'black' }}>
-      {props.friend.name}
-    </li>
-  );
+    <li style={{ color: isOnline ? 'green' : 'black' }}>{props.friend.name}</li>
+  )
 }
 ```
 

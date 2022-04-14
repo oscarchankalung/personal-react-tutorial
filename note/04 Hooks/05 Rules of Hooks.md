@@ -6,7 +6,7 @@ Hooks are JavaScript functions, but you need to follow two rules when using them
 - **Only Call Hooks from React Functions**
 - **Explaination: How Does React Know Which State Corresponds to Which Hook**
 
-Reference: https://reactjs.org/docs/hooks-rules.html
+**Reference**: https://reactjs.org/docs/hooks-rules.html
 
 ## Only Call Hooks at the Top Level
 

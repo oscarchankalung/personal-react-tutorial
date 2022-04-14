@@ -29,7 +29,7 @@
 }
 ```
 
-## Reference
+## References
 
 - [Prettier - Docs](https://prettier.io/docs/en/index.html)
 - [ESLint - User Guide](https://eslint.org/docs/user-guide)

@@ -10,7 +10,7 @@ An element describes what you want to see on the screen. Unlike browser DOM elem
 - **Updating the Rendered Element**
 - **React Only Updates What's Necessary**
 
-Reference: https://reactjs.org/docs/rendering-elements.html
+**Reference**: https://reactjs.org/docs/rendering-elements.html
 
 ## Rendering an Element into the DOM
 

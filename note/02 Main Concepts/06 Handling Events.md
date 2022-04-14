@@ -7,7 +7,7 @@ Handling events with React elements is very similar to handling events on DOM el
 - **Binding Event Handlers to Class**
 - **Passing Arguments to Event Handlers**
 
-Reference: https://reactjs.org/docs/handling-events.html
+**Reference**: https://reactjs.org/docs/handling-events.html
 
 ## Registering Event Handlers
 
@@ -32,22 +32,22 @@ Another difference is that you cannot return `false` to prevent default behavior
 
 ```jsx
 // HTML
-<form onsubmit="console.log('You clicked submit.'); return false">
+;<form onsubmit="console.log('You clicked submit.'); return false">
   <button type="submit">Submit</button>
 </form>
 
 // React
 function Form() {
   function handleSubmit(e) {
-    e.preventDefault();
-    console.log('You clicked submit.');
+    e.preventDefault()
+    console.log('You clicked submit.')
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <button type="submit">Submit</button>
     </form>
-  );
+  )
 }
 ```
 
@@ -64,17 +64,17 @@ When you define a component using an ES6 class, a common pattern is for an event
 ```jsx
 class Toggle extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {isToggleOn: true};
+    super(props)
+    this.state = { isToggleOn: true }
 
     // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
     this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
+      isToggleOn: !prevState.isToggleOn,
+    }))
   }
 
   render() {
@@ -82,14 +82,11 @@ class Toggle extends React.Component {
       <button onClick={this.handleClick}>
         {this.state.isToggleOn ? 'ON' : 'OFF'}
       </button>
-    );
+    )
   }
 }
 
-ReactDOM.render(
-  <Toggle />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Toggle />, document.getElementById('root'))
 ```
 
 You have to be careful about the meaning of `this` in JSX callbacks. In JavaScript, class methods are not bound by default. If you forget to bind `this.handleClick` and pass it to `onClick`, `this` will be `undefined` when the function is actually called.
@@ -105,15 +102,11 @@ class LoggingButton extends React.Component {
   // This syntax ensures `this` is bound within handleClick.
   // Warning: this is *experimental* syntax.
   handleClick = () => {
-    console.log('this is:', this);
+    console.log('this is:', this)
   }
 
   render() {
-    return (
-      <button onClick={this.handleClick}>
-        Click me
-      </button>
-    );
+    return <button onClick={this.handleClick}>Click me</button>
   }
 }
 ```
@@ -125,16 +118,12 @@ If you aren’t using class fields syntax, you can use an arrow function in the 
 ```jsx
 class LoggingButton extends React.Component {
   handleClick() {
-    console.log('this is:', this);
+    console.log('this is:', this)
   }
 
   render() {
     // This syntax ensures `this` is bound within handleClick
-    return (
-      <button onClick={() => this.handleClick()}>
-        Click me
-      </button>
-    );
+    return <button onClick={() => this.handleClick()}>Click me</button>
   }
 }
 ```

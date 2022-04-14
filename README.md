@@ -20,7 +20,7 @@ A personal documentation to react
   - 04 Thinking in React: Filterable Product Table
   - 05 Using Hooks: Chat
 
-## Reference
+## References
 
 - [Reactjs.org - Docs](https://reactjs.org/docs/getting-started.html)
 - [Reactjs.org - Tutorials](https://reactjs.org/docs/getting-started.html)

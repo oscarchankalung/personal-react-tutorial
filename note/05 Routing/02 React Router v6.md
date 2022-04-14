@@ -12,9 +12,6 @@
 - Multiple Sets of Routes
 - Descendant `<Routes>`
 
-Reference - Overview: https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/overview
-Reference - Tutorial: https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/tutorial
-
 ## Upgrading from v5
 
 ### Refactoring
@@ -37,4 +34,8 @@ Reference - Tutorial: https://reactrouterdotcom.fly.dev/docs/en/v6/getting-start
   - Supporting Route Children
 - Using `useRoutes()`
 
-Reference: https://reactrouterdotcom.fly.dev/docs/en/v6/upgrading/v5
+## References
+
+- **Overview**: https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/overview
+- **Tutorial**: https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/tutorial
+- **Upgrading**: https://reactrouterdotcom.fly.dev/docs/en/v6/upgrading/v5

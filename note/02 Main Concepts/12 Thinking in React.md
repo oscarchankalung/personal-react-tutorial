@@ -8,7 +8,7 @@ One of the many great parts of React is how it makes you think about apps as you
 - **Step 4: Identity Where Your State Should Live**
 - **Step 5: Add Inverse Data Flow**
 
-Reference: https://reactjs.org/docs/thinking-in-react.html
+**Reference**: https://reactjs.org/docs/thinking-in-react.html
 App: FilterableProductTable
 
 ## Step 1: Break The UI Into A Component Hierarchy

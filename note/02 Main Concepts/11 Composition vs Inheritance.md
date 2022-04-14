@@ -6,7 +6,7 @@ React has a powerful composition model, and we recommend using composition inste
 - **Specialization**
 - **Inheritance**
 
-Reference: https://reactjs.org/docs/composition-vs-inheritance.html
+**Reference**: https://reactjs.org/docs/composition-vs-inheritance.html
 App: Dialogs
 
 ## Containment

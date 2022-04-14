@@ -8,7 +8,7 @@ In React, we use `map()` function to transform arrays into lists of elements.
 - **Keys Must Only Be Unique Among Siblings**
 - **Embedding `map()` in JSX**
 
-Reference: https://reactjs.org/docs/lists-and-keys.html
+**Reference**: https://reactjs.org/docs/lists-and-keys.html
 
 ## Lists
 
@@ -18,14 +18,9 @@ You can build collections of elements and include them in JSX using curly braces
 
 ```jsx
 const numbers = [1, 2, 3, 4, 5]
-const listItems = numbers.map((number) =>
-  <li>{number}</li>
-);
+const listItems = numbers.map(number => <li>{number}</li>)
 
-React.DOM.render(
-  <ul>{listItems}</ul>,
-  document.getElementById('root')
-);
+React.DOM.render(<ul>{listItems}</ul>, document.getElementById('root'))
 ```
 
 ### Basic List Component
@@ -34,23 +29,19 @@ Usually you would render lists inside a component.
 
 ```jsx
 function NumberList(props) {
-  const number = props.numbers;
-  const listItems = numbers.map((number) =>
-    <li key={number.toString()}>
-      {number}
-    </li>
-  );
+  const number = props.numbers
+  const listItems = numbers.map(number => (
+    <li key={number.toString()}>{number}</li>
+  ))
 
-  return (
-    <ul>{listItems}</ul>
-  )
+  return <ul>{listItems}</ul>
 }
 
-const number = [1, 2, 3, 4, 5];
+const number = [1, 2, 3, 4, 5]
 ReactDOM.render(
   <NumberList numbers={numbers} />,
   document.getElementById('root')
-);
+)
 ```
 
 When you run this code, you’ll be given a warning that a key should be provided for list items. A “key” is a special string attribute you need to include when creating lists of elements.
@@ -60,11 +51,7 @@ When you run this code, you’ll be given a warning that a key should be provide
 Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys.
 
 ```jsx
-const todoItems = todos.map((todo) =>
-  <li key={todo.id}>
-    {todo.text}
-  </li>
-)
+const todoItems = todos.map(todo => <li key={todo.id}>{todo.text}</li>)
 ```
 
 ### Extracting Components with Keys
@@ -74,31 +61,23 @@ Keys only make sense in the context of the surrounding array. A good rule of thu
 ```jsx
 function ListItem(props) {
   const value = props.value
-  return (
-    <li key={value.toString()}>
-      {value}
-    </li>
-  );
+  return <li key={value.toString()}>{value}</li>
 }
 
 function NumberList(props) {
-  const numbers = props.numbers;
-  const listItems = numbers.map((number) =>
+  const numbers = props.numbers
+  const listItems = numbers.map(number => (
     <ListItem key={number.toString()} value={number} />
-  );
+  ))
 
-  return (
-    <ul>
-      {listItems}
-    </ul>
-  );
+  return <ul>{listItems}</ul>
 }
 
 const numbers = [1, 2, 3, 4, 5]
 React.DOM.render(
   <NumberList numbers={numbers} />,
   document.getElementById('root')
-);
+)
 ```
 
 ### Keys Must Only Be Unique Among Siblings
@@ -147,15 +126,14 @@ JSX allows embedding any expression in curly braces so we could inline the `map(
 
 ```jsx
 function NumberList(props) {
-  const numbers = props.numbers;
+  const numbers = props.numbers
   return (
     <ul>
-      {numbers.map((number) =>
-        <ListItem key={number.toString()}
-                  value={numbers} />
-      )}
+      {numbers.map(number => (
+        <ListItem key={number.toString()} value={numbers} />
+      ))}
     </ul>
-  );
+  )
 }
 ```
 

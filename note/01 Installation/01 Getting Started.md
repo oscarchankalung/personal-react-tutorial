@@ -17,4 +17,4 @@
   - API Reference
   - Glossary and FAQ
 
-Reference: https://reactjs.org/docs/getting-started.html
+**Reference**: https://reactjs.org/docs/getting-started.html

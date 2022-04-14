@@ -4,4 +4,4 @@ Both Formik and React Hook Form are powerful libraries that will enable you to b
 
 And the winner is: React Hook Form
 
-Reference: https://blog.logrocket.com/react-hook-form-vs-formik-comparison/
+**Reference**: https://blog.logrocket.com/react-hook-form-vs-formik-comparison/

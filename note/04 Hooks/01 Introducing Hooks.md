@@ -8,7 +8,7 @@ On this page, we’ll continue by explaining why we’re adding Hooks to React a
 - **Complex lifecycle methods become hard to understand**
 - **Classes confuse both people and machines**
 
-Reference: https://reactjs.org/docs/hooks-intro.html
+**Reference**: https://reactjs.org/docs/hooks-intro.html
 
 ## It’s hard to reuse stateful logic between components
 

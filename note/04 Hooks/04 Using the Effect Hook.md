@@ -12,7 +12,7 @@
   - **Explaination: Why Effects Run on Each Update**
   - **Tip: Optimizing Performance by Skipping Effects**
 
-Reference: https://reactjs.org/docs/hooks-effect.html
+**Reference**: https://reactjs.org/docs/hooks-effect.html
 App: Hooks
 
 ## Effects Without Cleanup

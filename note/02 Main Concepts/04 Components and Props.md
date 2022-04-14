@@ -8,7 +8,7 @@ Components let you split the UI into independent, reusable pieces, and think abo
 - **Extracting Components**
 - **Props are Read-Only**
 
-Reference: https://reactjs.org/docs/components-and-props.html
+**Reference**: https://reactjs.org/docs/components-and-props.html
 
 ## Function and Class Components
 
@@ -16,7 +16,7 @@ The simplest way to define a component is to write a JavaScript function.
 
 ```jsx
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+  return <h1>Hello, {props.name}</h1>
 }
 ```
 
@@ -25,7 +25,7 @@ You can also use an ES6 class to define a component.
 ```jsx
 class Welcome extends React.Component {
   render() {
-    return <h1>Hello, {this.props.name}</h1>;
+    return <h1>Hello, {this.props.name}</h1>
   }
 }
 ```
@@ -36,15 +36,12 @@ The above two components are equivalent from React’s point of view. Function a
 
 ```jsx
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+  return <h1>Hello, {props.name}</h1>
 }
 
-const element = <Welcome name="Sara" />;
+const element = <Welcome name="Sara" />
 
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+ReactDOM.render(element, document.getElementById('root'))
 ```
 
 - We call `ReactDOM.render()` with the `<Welcome name="Sara" />` element.
@@ -67,22 +64,17 @@ function Comment(props) {
   return (
     <div className="Comment">
       <div className="UserInfo">
-        <img className="Avatar"
+        <img
+          className="Avatar"
           src={props.author.avatarUrl}
           alt={props.author.name}
         />
-        <div className="UserInfo-name">
-          {props.author.name}
-        </div>
+        <div className="UserInfo-name">{props.author.name}</div>
       </div>
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
-  );
+  )
 }
 ```
 
@@ -91,36 +83,27 @@ First, we will extract `Avatar`. Next, we will extract a `UserInfo` component th
 ```jsx
 function Avatar(props) {
   return (
-    <img className="Avatar"
-      src={props.user.avatarUrl}
-      alt={props.user.name}
-    />
-  );
+    <img className="Avatar" src={props.user.avatarUrl} alt={props.user.name} />
+  )
 }
 
 function UserInfo(props) {
   return (
     <div className="UserInfo">
       <Avatar user={props.user} />
-      <div className="UserInfo-name">
-        {props.user.name}
-      </div>
+      <div className="UserInfo-name">{props.user.name}</div>
     </div>
-  );
+  )
 }
 
 function Comment(props) {
   return (
     <div className="Comment">
       <UserInfo user={props.author} />
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
-  );
+  )
 }
 ```
 

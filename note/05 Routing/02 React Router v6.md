@@ -36,6 +36,7 @@
 
 ## References
 
-- **Overview**: https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/overview
-- **Tutorial**: https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/tutorial
-- **Upgrading**: https://reactrouterdotcom.fly.dev/docs/en/v6/upgrading/v5
+- [Udemy - React Complete Guide - Section 20](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25600778#overview)
+- [React Router - Overview](https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/overview)
+- [React Router - Tutorial](https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/tutorial)
+- [React Router - Upgrading](https://reactrouterdotcom.fly.dev/docs/en/v6/upgrading/v5)

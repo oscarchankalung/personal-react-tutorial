@@ -1,7 +1,6 @@
-# ESLint and Prettier
+# Code Debugger and Formatter
 
 - Introduction to ESLint and Prettier
-
 - Installation
 - Usage
 - Configuration

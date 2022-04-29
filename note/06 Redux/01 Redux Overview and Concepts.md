@@ -1,0 +1,22 @@
+# Redux Overview and Conceots
+
+- What is Redux?
+  - Why should I use Redux?
+  - When should I use Redux?
+  - Redux Libraries and Tools
+    - `React-Redux`
+    - `Redux Toolkit`
+    - `Redux DevTools `
+- Redux Terms and Concepts
+  - State Management
+  - Immutability
+  - Terminology
+    - Actions
+    - Action Creators
+    - Reducers
+    - Store
+    - Dispatch
+    - Selectors
+  - Redux Application Data Flow
+    - Initial setup
+    - Updates

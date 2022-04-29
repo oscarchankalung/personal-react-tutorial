@@ -4,8 +4,8 @@ One of the many great parts of React is how it makes you think about apps as you
 
 - **Step 1: Break The UI Into A Component Hierarchy**
 - **Step 2: Build A Static Version in React**
-- **Step 3: Identity The Minimal Representation of UI State**
-- **Step 4: Identity Where Your State Should Live**
+- **Step 3: Identify The Minimal Representation of UI State**
+- **Step 4: Identify Where Your State Should Live**
 - **Step 5: Add Inverse Data Flow**
 
 **Reference**: https://reactjs.org/docs/thinking-in-react.html

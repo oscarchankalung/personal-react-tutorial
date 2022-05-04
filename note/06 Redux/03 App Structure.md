@@ -1,4 +1,4 @@
-# Redux App Structure
+# App Structure
 
 - Creating the Redux Store
 - Creating Slice Reducers and Actions

@@ -1,4 +1,4 @@
-# Redux Overview and Conceots
+# Overview and Conceots
 
 - What is Redux?
   - Why should I use Redux?

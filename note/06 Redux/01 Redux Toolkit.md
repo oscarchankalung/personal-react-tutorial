@@ -22,3 +22,9 @@ RTK Query is provided as an optional addon within the `@reduxjs/toolkit` package
 - `createApi()`
 - `fetchBaseQuery()`
 - `setupListeners()`
+
+## References
+
+- [Redux - Redux Essential](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+- [Redux Toolkit - Redux Toolkit Usage Guide](https://redux-toolkit.js.org/usage/usage-guide)
+- [Redux Toolkit - RTK Query Overview](https://redux-toolkit.js.org/rtk-query/overview)

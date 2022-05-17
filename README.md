@@ -1,6 +1,6 @@
 # React Documentation
 
-A personal documentation to react
+A personal documentation to react offical documentation
 
 - [Content](#content)
 - [Reference](#reference)
